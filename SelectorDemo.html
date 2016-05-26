@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select选择器</title>
+	<script src=Turbo.js></script>
+</head>
+<body>
+    <div id='box'class='box'>
+        <p>fsda</p>
+        <div>
+            <p>代码的艺术</p>
+        </div>
+    </div>
+    <div class='c'>
+        <p>fsda</p>
+        <p>fsda</p>
+    </div>
+    <div class='c'></div>
+    <s>fdasfsad</s>
+    <s>fdasfsad</s>
+
+</body>
+<script>
+//   三个参数 select( str , str , arrDom  )
+//   实现标签 select("div")  类 select(".box")  id select("#box")  后代选择器  select("p"," #box") select("#box p")
+//select("p","#box",arr)  arr 必须是真数组才行，不然会报错 ，待优化
+
+    console.log(select('div'));
+    console.log(select('.box'));
+    console.log(select('#box'));
+    console.log(select('p', '#box'));
+    console.log(select('#box p'));
+
+    var s = document.getElementsByTagName("s")[0];
+    var arrDom = [];
+    arrDom.push(s);
+    console.log(select("p","div",arrDom));
+
+</script>
+</html>
